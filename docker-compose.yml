@@ -17,6 +17,7 @@ services:
     volumes:
       - ./gateway/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./gateway/certs:/certs
+      - ./gateway/.htpasswd:/.htpasswd
     links:
       - web1
       - web2
